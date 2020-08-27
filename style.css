@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.agg {
+  text-align: center;
+  margin-left: 50px;
+  width: 300px;
+  height: 300px;
+}
+
+#scrollReport {
+  /* color: white; */
+  /* background: black; */
+  padding: 10px 10px;
+  border-radius: 4px;
+  opacity: 0.7;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 1000;
+}
+
+#scrollReport:hover {
+  opacity: 0.9;
+}
+
+#section1 {
+  background-image: url(https://www.userver.net/Uploads/20200827/5f474c4eabbd0.jpg);
+  background-size: cover;
+}
+
+.wordcolor1 {
+  color: whitesmoke;
+  margin-left: 10px;
+}
+
+#section2 {
+  background-image: url(https://www.userver.net/Uploads/20200827/5f474fdc64a10.jpg);
+  background-size: cover;
+}
+
+#section3 {
+  background-image: url(https://www.userver.net/Uploads/20200827/5f4750f461e7d.jpg);
+  background-size: cover;
+}
+
+.wordcolor3 {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+#section4 {
+  background-image: url(https://www.userver.net/Uploads/20200827/5f4751f59a2d2.jpg);
+  background-size: cover;
+}
+
+.wordcolor4 {
+  font-weight: bold;
+  color: #000;
+}
+
+section h1 {
+  position: relative;
+  left: -100%;
+  transition: all 1s cubic-bezier(0.29, 1.52, 0.5, 1.34);
+}
+
+/* 選到一個section且擁有.active 裡面的 h1 */
+section.active h1 {
+  left: 0%;
+  text-shadow: 3px 3px 0px red;
+  color: #00ace2;
+}
+
+section {
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+section.active {
+  filter: grayscale(10%);
+}
+
+section img {
+  opacity: 0;
+  transform: rotateZ(90deg) scale(0.1);
+  transition: all 0.5s ease;
+}
+
+section.active img {
+  transform: rotateZ(0deg) scale(1);
+  opacity: 1;
+}
+
+#top {
+  text-align: center;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  font-size: 45px;
+  border-radius: 50px 50px 50px 50px;
+  display: none;
+  border: 1px solid black;
+  content: "UP";
+  background-image: url(https://www.userver.net/Uploads/20200827/5f468d6f99de4.png);
+}
+
+.animationtitle {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.testContainer {
+  text-align: center;
+}
+
+.a {
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 0.5s;
+  transform: translateX(-2000px);
+  animation-fill-mode: forwards;
+  color: rgb(83, 191, 199);
+  font-size: 60px;
+  margin: 8px;
+  margin-top: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.a:hover {
+  filter: blur(3px);
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-2000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
